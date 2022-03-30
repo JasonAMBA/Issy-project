@@ -1,0 +1,11 @@
+.flex{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    background-color: #252541;
+    color: white;
+}
+
+h2{
+    margin: 10px;
+}
