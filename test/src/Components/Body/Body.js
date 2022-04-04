@@ -1,6 +1,8 @@
 import './Body.css';
 import React from 'react';
 import Plot from 'react-plotly.js';
+import Temperature from '../plotly-graph/temperature';
+import TemperatureComparison from '../plotly-graph/temperature(comparison)';
 
 function Body() {
     return(
@@ -12,11 +14,7 @@ function Body() {
                 <div>
                     <p>Suivi climatique :</p>
                     <p>Année en cours (dernières 24 heures) :</p>
-                    <Plot
-                        data={[
-            
-                        ]}
-                    />
+                    <Temperature/>
                     <p>Données temps réel température sous abri :</p>
                     <p>Données temps réel ressentie :</p>
                     <p>Prévision +-H :</p>
@@ -27,10 +25,12 @@ function Body() {
                     <p>Select date :</p>
                     <input type="date" name="" id=""/>
                     <p>Comparaison autres années :</p>
-                    <Plot
-                        
-                    />
+                    <TemperatureComparison/>
                 </div>
+            </div>
+            <hr />
+            <div className='colorTitle'>
+                <h2>Pluviométrie</h2>
             </div>
         </div>
     );
