@@ -1,8 +1,9 @@
 import './Body.css';
 import React from 'react';
-import Plot from 'react-plotly.js';
 import Temperature from '../plotly-graph/temperature';
 import TemperatureComparison from '../plotly-graph/temperature(comparison)';
+import Rainfull from '../plotly-graph/rainfull';
+import RainfullComparison from '../plotly-graph/rainfull(comparison)';
 
 function Body() {
     return(
@@ -31,6 +32,24 @@ function Body() {
             <hr />
             <div className='colorTitle'>
                 <h2>Pluviométrie</h2>
+            </div>
+            <div>
+                <p>Suivi pluviométrie :</p>
+                <p>Année en cours (dernières 24 heures) :</p>
+                <Rainfull/>
+                <p>Données du jour :</p>
+                <p>Pas de pluie depuis :</p>
+                <p>Type de précipitations :</p>
+                <p>Valeur la plus haute :</p>
+                <p>Valeur la plus basse :</p>
+                <p>Select date : </p>
+                <input type="date" name="" id=""/>
+                <p>Comparaison autres années :</p>
+                <RainfullComparison/>
+            </div>
+            <hr />
+            <div className='colorTitle'>
+                <h2>Vent</h2>
             </div>
         </div>
     );
