@@ -10,6 +10,8 @@ import Pressure from '../plotly-graph/pressure';
 import PressureComparison from '../plotly-graph/pressure(comparison)';
 import Humidity from '../plotly-graph/humidity';
 import HumidityComparison from '../plotly-graph/humidity(comparison)';
+import Sunshine from '../plotly-graph/sunshine';
+import SunshineComparison from '../plotly-graph/sunshine(comparison)';
 
 function Body() {
     return(
@@ -99,6 +101,24 @@ function Body() {
                 </div>
             </div>
             <hr />
+            <div className='colorTitle'>
+                <h2>Ensoleillement</h2>
+            </div>
+            <div className='cropping'>
+                <div>
+                    <p>Suivi de l'ensoleillement</p>
+                    <p>Année en cours (dernières 24 heures) :</p>
+                    <Sunshine/>
+                    <p>Valeur la plus haute :</p>
+                    <p>Valeur la plus basse :</p>
+                </div>
+                <div>
+                    <p>Select date :</p>
+                    <input type="date" name="" id=""/>
+                    <p>Comparaison autres années :</p>
+                    <SunshineComparison/>
+                </div>
+            </div>
         </div>
     );
 }
