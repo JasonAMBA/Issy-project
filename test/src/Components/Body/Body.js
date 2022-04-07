@@ -6,6 +6,10 @@ import Rainfull from '../plotly-graph/rainfull';
 import RainfullComparison from '../plotly-graph/rainfull(comparison)';
 import Wind from '../plotly-graph/wind';
 import WindComparison from '../plotly-graph/wind(comparison)';
+import Pressure from '../plotly-graph/pressure';
+import PressureComparison from '../plotly-graph/pressure(comparison)';
+import Humidity from '../plotly-graph/humidity';
+import HumidityComparison from '../plotly-graph/humidity(comparison)';
 
 function Body() {
     return(
@@ -76,11 +80,25 @@ function Body() {
                 <div>
                     <p>Suivi de la pression :</p>
                     <p>Année en cours (dernières 24 heures) :</p>
+                    <Pressure/>
+                    <p>Valeur la plus haute :</p>
+                    <p>Valeur la plus basse :</p>
+                    <p>Suivi de l'humidité :</p>
+                    <p>Année en cours (dernières 24 heures) :</p>
+                    <Humidity/>
                 </div>
                 <div>
-                    
+                    <p>Select date :</p>
+                    <input type="date" name="" id=""/>
+                    <p>Comparaison autres années :</p>
+                    <PressureComparison/>
+                    <p>Select date :</p>
+                    <input type="date" name="" id=""/>
+                    <p>Comparaison autres années :</p>
+                    <HumidityComparison/>
                 </div>
             </div>
+            <hr />
         </div>
     );
 }
